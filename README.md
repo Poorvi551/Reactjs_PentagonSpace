@@ -85,7 +85,7 @@
 
 ### * Difference between HTML and JSX :-
 
-<table>
+    <table>
     <td>
         <tr>HTML</tr>
         <tr><!--Comment--></tr>
@@ -104,5 +104,5 @@
         <tr><p style={{color:"red"}}>Hello</p></tr>
         <tr>CamelCase - onClick, onSubmit,onChange etc..</tr>
     </td>
-</table>
+    </table>
 
