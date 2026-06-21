@@ -2,10 +2,10 @@
 
 # Table of Contents :-
 
- [React.js](#React.js)
-2. Library
-3. Framework
-4. Feature of React.js
+1. [React.js](#React.js)
+2. [Library](#Library)
+3. [Framework](#Framework)
+4. [Feature of React.js](#Feature of React.js)
 
 # **React.js**
 
