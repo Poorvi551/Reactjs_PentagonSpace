@@ -89,7 +89,7 @@
     <td>
         <tr>HTML</tr>
         <tr><!--Comment--></tr>
-        <tr><h1 class="head">Hello</h1></tr>
+        <tr><p><h1 class="head">Hello</h1></p></tr>
         <tr><h1 id="head">Hey</h2></tr>
         <tr><label for="user">Name </label></tr>
         <tr><p style="color:red">Hello</p></tr>
