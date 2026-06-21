@@ -42,7 +42,7 @@
     1. Real DOM
     2. Virtual DOM
 
-### 1. Virtual DOM :-
+<h3><b>1. Virtual DOM :-</b></h3>
 
 * Virtual DOM is a replica of Real DOM.
 * Real DOM and Virtual DOM will be in sink with the help of *"Reconcilation"*. ***Reconciliation*** is achieved through ***"diffing algorithm"***.
