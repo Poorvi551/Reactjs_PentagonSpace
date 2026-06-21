@@ -2,12 +2,12 @@
 
 # Table of Contents :-
 
-1. [React.js](#React.js)
-2. [Library](#Library)
-3. [Framework](#Framework)
-4. [Feature of React.js](#Feature-of-React.js)
-5. [Component](#Component)
-6. [Virtual DOM/ Reconcilation](#Virtual-DOM/-Reconcilation)
+1. [React.js](#reactjs)
+2. [Library](#library)
+3. [Framework](#framework)
+4. [Feature of React.js](#feature-of-reactjs)
+5. [Component](#component)
+6. [Virtual DOM/ Reconcilation](#virtual-dom-reconcilation)
 
 # React.js
 
