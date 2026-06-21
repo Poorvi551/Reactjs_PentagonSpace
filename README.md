@@ -6,6 +6,8 @@
 2. [Library](#Library)
 3. [Framework](#Framework)
 4. [Feature of React.js](#Feature-of-React.js)
+5. [Component](#Component)
+6. [Virtual DOM/ Reconcilation](#Virtual-DOM/-Reconcilation)
 
 # React.js
 
@@ -30,17 +32,17 @@
 4. React.js uses jsx
 5. Unidirectional data flow.
 
-## * **Component :-**
+## Component :-
 
 * React.js is a component based architecture it means it allows us to divide user interfaces into small piece of blocks that blocks is nothing but component and it is reusable.
 
-## * **Virtual DOM/ Reconcilation :-** 
+## Virtual DOM/ Reconcilation :- 
 
 * There are two types of DOM :-
     1. Real DOM
     2. Virtual DOM
 
-### **1. Virtual DOM :-**
+### 1. Virtual DOM :-
 
 * Virtual DOM is a replica of Real DOM.
 * Real DOM and Virtual DOM will be in sink with the help of *"Reconcilation"*. ***Reconciliation*** is achieved through ***"diffing algorithm"***.
