@@ -4,25 +4,25 @@
 
 1. [React.js](#React.js)
 2. [Library](#Library)
-3. [Framework](##Framework)
+3. [Framework](#Framework)
 4. [Feature of React.js](#Feature of React.js)
 
-# **React.js**
+# React.js
 
 #### * **React.js :-** React.js is a open source frontend javascript library used to built user interfaces quickly, particularly for *single page application*.
 
 * React.js wa developed by ***Jordan Walke*** in 2012 and open sourced in 2013.
 * It is maitained by ***meta*** (Facebook).
 
-## * **Library :-**
+## Library :-
 
 * Library is a collection of pre written codes, functions and Tools,that can be used in our program to build application faster.
 
-## * **Framework :-**
+## Framework :-
 
 * Framework is a collection of pre written codes, functions and tools plus a complete structure and set of rules we must follow.
 
-### * **Feature of React.js :-**
+### Feature of React.js :-
 
 1. Component based Architecture
 2. React.js uses virtual DOM.
