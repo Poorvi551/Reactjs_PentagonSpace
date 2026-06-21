@@ -5,7 +5,7 @@
 1. [React.js](#React.js)
 2. [Library](#Library)
 3. [Framework](#Framework)
-4. [Feature of Reactjs](#Feature of Reactjs)
+4. [Feature of React.js](#Feature-of-React.js)
 
 # React.js
 
@@ -22,7 +22,7 @@
 
 * Framework is a collection of pre written codes, functions and tools plus a complete structure and set of rules we must follow.
 
-### Feature of Reactjs :-
+### Feature of React.js :-
 
 1. Component based Architecture
 2. React.js uses virtual DOM.
