@@ -8,6 +8,7 @@
 4. [Feature of Reactjs](#feature-of-reactjs)
 5. [Component](#component)
 6. [Virtual DOM/ Reconcilation](#virtual-dom-reconcilation)
+7. [Single Page Application](#single-page-application)
 
 # React.js
 
@@ -42,7 +43,7 @@
     1. Real DOM
     2. Virtual DOM
 
-<h3><b>1. Virtual DOM :-</b></h3>
+### * **1. Virtual DOM :-**
 
 * Virtual DOM is a replica of Real DOM.
 * Real DOM and Virtual DOM will be in sink with the help of *"Reconcilation"*. ***Reconciliation*** is achieved through ***"diffing algorithm"***.
@@ -50,4 +51,58 @@
 
 ## * **Multipage Application (MPA) :-(Server-side Rendering)** 
 
-* Multipage Application is a Fullstack web application, for each and every request made by the user, server loads and sends new html pages or files 
+* Multipage Application is a Fullstack web application, for each and every request made by the user, server loads and sends new html pages or files.
+* *Ex :- Tradidtional portals*
+* Traditional websites like banking applicaations , e-commerce website, university portals etc..
+
+* ***Drwabacks:-***
+
+  1. Slow navigation
+  2. Bad user experience(entire page reload each time)
+  3. Less mobile friendly due to network.
+
+## Single page Application 
+
+#### * **SPA:-**
+
+* SPA is a fullstack web application that loads a single HTML file only once from the server and dynamically updates the content on the same page without reloading.
+* *Ex :- Facebook, Gmail, Flipkart, and Social Media Applications etc..*
+
+#### * **Advantages :-**
+
+1. Smooth navigation
+2. Reduces Server Load (Everything client will render)
+3. Feels like mobile App
+
+## Javascript XML :-
+
+* *JSX* is a way to write HTML like code inside the javascript code to create component.
+* JSX is similar to HTML.
+* JSX is not understandable by the browser.
+* ***Browser will not understand react js or JSX it uses translator to convert it to js which is understandable by browser.
+
+###  ***Translator/transcompiler -> Babel.js***
+
+### * Difference between HTML and JSX :-
+
+<table>
+    <td>
+        <tr>HTML</tr>
+        <tr><!--Comment--></tr>
+        <tr><h1 class="head">Hello</h1></tr>
+        <tr><h1 id="head">Hey</h2></tr>
+        <tr><label for="user">Name </label></tr>
+        <tr><p style="color:red">Hello</p></tr>
+        <tr>No camelcase onclick, onsubmit,onchange etc..</tr>
+    </td>
+    <td>
+        <tr>JSX</tr>
+        <tr>{/*Comment*/}</tr>
+        <tr><h1 className="head">Hello</h1></tr>
+        <tr><h1 id="head">Hey use Strict Syntax</h1></tr>
+        <tr><label htmlFor="user">Name</label></tr>
+        <tr><p style={{color:"red"}}>Hello</p></tr>
+        <tr>CamelCase - onClick, onSubmit,onChange etc..</tr>
+    </td>
+</table>
+
