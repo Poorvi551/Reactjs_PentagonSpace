@@ -55,7 +55,7 @@
 * *Ex :- Tradidtional portals*
 * Traditional websites like banking applicaations , e-commerce website, university portals etc..
 
-* ***Drwabacks:-***
+* ***Drawbacks:-***
 
   1. Slow navigation
   2. Bad user experience(entire page reload each time)
@@ -110,11 +110,11 @@
 
 * Vite Installation :-
 
-  > npm create vite@latest
-  > Project name - in lowercase - first_project
-  > Select Framework - React
-  > Select variant - javascript
-  > Install with npm and start now? yes
+      > npm create vite@latest
+      > Project name - in lowercase - first_project
+      > Select Framework - React
+      > Select variant - javascript
+      > Install with npm and start now? yes
 
 ## **Open project folder - delete -> app.css and index.css -> open main.jsx -> remove - import index.css -> than open app.jsx -> remove whole complete code and write your logics for the project.**
 
