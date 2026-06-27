@@ -147,8 +147,8 @@
 
 <table>
    <tr>
-     <td>Function based component</td>
-     <td>Class based component</td>
+     <td><b>Function based component</b></td>
+     <td><b>Class based component</b></td>
    </tr>
    <tr>
      <td>FBC is also known as stateless component,but using hooks we can manage states.</td>
