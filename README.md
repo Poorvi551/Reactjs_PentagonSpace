@@ -85,14 +85,14 @@
 
 ### * Difference between HTML and JSX :-
 
-   **HTML**                                             |                         **JSX**
+    **HTML**                                             |                         **JSX**
                                                         |
-1. <!--Comment-->                                       |    1. {/*Comment*/}
-2. <h1 class="head">Hello</h1>                          |    2. <h1 className="head">Hello</h1>
-3. <h1 id="head">Hey</h2>                               |    3. <h1 id="head">Hey</h2>
-4. <label for="user">Name </label>                      |    4. <label htmlFor="user">Name</label>
-5. <p style="color:red">Hello</p></tr>                  |    5. <p style={{color:"red"}}>Hello</p>
-6. No camelcase onclick, onsubmit,onchange etc..        |    6. CamelCase - onClick, onSubmit,onChange etc..
+    1. <!--Comment-->                                       |    1. {/*Comment*/}
+    2. <h1 class="head">Hello</h1>                          |    2. <h1 className="head">Hello</h1>
+    3. <h1 id="head">Hey</h2>                               |    3. <h1 id="head">Hey</h2>
+    4. <label for="user">Name </label>                      |    4. <label htmlFor="user">Name</label>
+    5. <p style="color:red">Hello</p></tr>                  |    5. <p style={{color:"red"}}>Hello</p>
+    6. No camelcase onclick, onsubmit,onchange etc..        |    6. CamelCase - onClick, onSubmit,onChange etc..
 
 ### * Rules of JSX :-  
 
