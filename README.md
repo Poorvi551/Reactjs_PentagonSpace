@@ -148,18 +148,24 @@
 <table>
    <tr>
      <td>Function based component</td>
-     <td>FBC is also known as stateless component,but using hooks we can manage states.</td>
-     <td>FBC is very simple and easy to use</td>
-     <td>No need of constructor, render() and this.</td>
-     <td>Lifecycle method is not supported, but using hooks we can achieve.</td>
+     <td>Class based component</td>
    </tr>
    <tr>
-       <td>Class based component</td>
+     <td>FBC is also known as stateless component,but using hooks we can manage states.</td>
      <td>CBC is also known as stateful component</td>
-     <td>CBC is very complex and requires more code. </td>
-     <td>Needs constructor,render() and this.</td>
-     <td>Lifecycle method is supported.</td>
    </tr>
+    <tr>
+        <td>FBC is very simple and easy to use</td>
+        <td>CBC is very complex and requires more code. </td>
+    </tr>
+    <tr>
+       <td>No need of constructor, render() and this.</td>
+       <td>Needs constructor,render() and this.</td> 
+    </tr>
+    <tr>
+        <td>Lifecycle method is not supported, but using hooks we can achieve.</td>
+        <td>Lifecycle method is supported.</td>
+    </tr>
 </table>
 
 
