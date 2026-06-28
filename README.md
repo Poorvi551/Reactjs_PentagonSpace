@@ -168,6 +168,34 @@
     </tr>
 </table>
 
+* Structure of FBC :-
+
+      import React from 'react'
+      const App=()=>{
+      return(
+         <h1>Welcome</h1>
+      )
+      }
+      export Default App;
+
+* Structure of CBC :-
+
+      import React from 'react'
+      import {Component} from 'react'
+      class App extends Component
+          render(){
+             return(
+                 <h1>Welcome</h1>
+       )
+       }
+      export Default App;
+
+## Props
+
+#### * Props are nothing but properties or attributes
+
+  
+  
 
 
         
