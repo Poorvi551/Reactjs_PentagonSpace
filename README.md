@@ -116,7 +116,7 @@
       > Select variant - javascript
       > Install with npm and start now? yes
 
-## **Open project folder - delete -> app.css and index.css -> open main.jsx -> remove - import index.css -> than open app.jsx -> remove whole complete code and write your logics for the project.**
+#### **Open project folder - delete -> app.css and index.css -> open main.jsx -> remove - import index.css -> than open app.jsx -> remove whole complete code and write your logics for the project.**
 
 * In case of multiple elements use parent tag <div> or empty fragments(<> </>).
 
