@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin:0;;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 65px;
+    background: linear-gradient(to top, #d5b792, #dd8c40);
+    color: #222;
+    margin-bottom: 20px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    width:20%
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    width:20%;
+}
