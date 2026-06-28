@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #9bafca;
+    color: white;
+    height: 65px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+.left{
+    color: white;
+}
