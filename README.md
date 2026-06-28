@@ -194,6 +194,67 @@
 
 #### * Props are nothing but properties or attributes
 
+* Props are way to transfer data from one component to another component (i.e parent -> to child.
+* The component which receives data that data cannot be modified, it is immutable (read-only).
+* Props are unidirectional.
+* *Ex: Source code - [props_example](./props_example)*
+
+App.jsx
+
+    import React from 'react'
+    import UserData from './pages/UserData'
+    const App =()=>{
+       let username='Poorvi'
+       return(
+       <>
+       <UserData a={username}/>
+       </>
+       )
+    }
+    export Default App;
+
+UserData.jsx
+
+    import React from 'react'
+    const UserData=(props)=>{
+    return(
+        <>
+        <h1>Name:{props.a}</h1>
+        </>
+    )
+    }
+    export Default UserData;
+
+
+***NOTE :- Function should always be returned to display the value if you use console.log - value will not be displayed so use return keyword.***
+
+## Hooks
+
+* **Current version of react.js is - 19.2**
+* **Hooks :-** Hooks are special functions that allows function based components to use features like state management,lifecycle methods, side effects etc.
+
+  <table>
+      <tr>
+          <td>Hook names</td>
+          <td>Purpose</td>
+      </tr>
+      <tr>
+          <td>useState()</td>
+          <td>To manage states</td>
+      </tr>
+      <tr>
+          <td>useEffect()</td>
+          <td>To perform side effects(making API calls)</td>
+      </tr>
+      <tr>
+          <td>useContext()</td>
+          <td>For global  state management </td>
+      </tr>
+      <tr>
+          <td>useNavigate() </td>
+          <td>To perform </td>
+      </tr>
+  </table>
   
   
 
