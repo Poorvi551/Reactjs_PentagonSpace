@@ -256,8 +256,110 @@ UserData.jsx
       </tr>
   </table>
   
+  ### State Management
+
+  * **State :-** State is an object that holds data and allows it to change over the time.
+  * Whenever the data changes, this changes are captured and stored.
+ 
+  * *Syntax :-*
+
+        import {useState} from 'react'
+
+        const [state,setState]=useState(initial value)
+                 /       \
+    state variable        state function
+
+* Ex :- Source code - 
+* Ex :- Countdown Example - []
+
+ ## conditional rendering
+
+ * Conditional Rendering means based on the condition the components or elements will be rendered on the UI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
-
-        
+ 
 
