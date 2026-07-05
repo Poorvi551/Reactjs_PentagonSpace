@@ -11,10 +11,11 @@
 7. [Single Page Application](#single-page-application)
 8. [Javascript XML](#javascript-xml)
 9. [Vite Installation](#Vite-Installation)
-10. [Component](#component)
-11. [Props](#props)
-12. [Hooks](#hooks)
-13. [Conditional rendering](#conditional-rendering)
+10. [Map,Filter and Reduce](#ma)
+11. [Component](#component)
+12. [Props](#props)
+13. [Hooks](#hooks)
+14. [Conditional rendering](#conditional-rendering)
 
 # React.js
 
@@ -55,7 +56,9 @@
 * Real DOM and Virtual DOM will be in sink with the help of *"Reconcilation"*. ***Reconciliation*** is achieved through ***"diffing algorithm"***.
 * *Reconciliation* means comparing old virtual DOM and new virtual DOM to find difference.
 
-## * **Multipage Application (MPA) :-(Server-side Rendering)** 
+## Multipage Application 
+
+* **Multipage Application (MPA) :-(Server-side Rendering)** 
 
 * Multipage Application is a Fullstack web application, for each and every request made by the user, server loads and sends new html pages or files.
 * *Ex :- Traditional portals*
@@ -80,7 +83,7 @@
 2. Reduces Server Load (Everything client will render)
 3. Feels like mobile App
 
-## Javascript XML :-
+## Javascript XML 
 
 * *JSX* is a way to write HTML like code inside the javascript code to create component.
 * JSX is similar to HTML.
@@ -114,7 +117,7 @@
    1. Standard method
    2. vite method - quick and mostly used by companies.
 
-* Vite Installation :-
+## Vite Installation :-
 
       > npm create vite@latest
       > Project name - in lowercase - first_project
@@ -129,7 +132,7 @@
 * *Ex:- Source code - []()*
 * *Ex:- Source code - []()*
 
-### Map, Filter and Reduce
+## Map Filter and Reduce
 
 #### * Map
 
@@ -289,6 +292,35 @@ UserData.jsx
 ### 1. if-else :
 
   * Example : Source code :
+
+
+        import React from 'react'
+        import {useState} from 'react'
+        const App = () => {
+           const [state,setState]=useState(false)
+           let message;
+           if (state){
+               message = <h1>Welcome to home page</h1>
+           }else{
+               message=<h1>Please Login</h1>
+           }
+           function toggle(){
+               setState(!state)
+           }
+           return (
+              <>
+                 <h1>{message}</h1>
+                 <button onClick={toggle}>Click me</button>
+              </>
+           )
+        }
+        export Default App
+
+### 2. Ternary Operator :
+
+* Example : Source code - 
+
+    
 
 
 
