@@ -9,6 +9,12 @@
 5. [Component](#component)
 6. [Virtual DOM/ Reconcilation](#virtual-dom-reconcilation)
 7. [Single Page Application](#single-page-application)
+8. [Javascript XML](#javascript-xml)
+9. [Vite Installation](#Vite-Installation)
+10. [Component](#component)
+11. [Props](#props)
+12. [Hooks](#hooks)
+13. [Conditional rendering](#conditional-rendering)
 
 # React.js
 
@@ -52,7 +58,7 @@
 ## * **Multipage Application (MPA) :-(Server-side Rendering)** 
 
 * Multipage Application is a Fullstack web application, for each and every request made by the user, server loads and sends new html pages or files.
-* *Ex :- Tradidtional portals*
+* *Ex :- Traditional portals*
 * Traditional websites like banking applicaations , e-commerce website, university portals etc..
 
 * ***Drawbacks:-***
@@ -272,9 +278,17 @@ UserData.jsx
 * Ex :- Source code - 
 * Ex :- Countdown Example - []
 
- ## conditional rendering
+ ## Conditional rendering
 
- * Conditional Rendering means based on the condition the components or elements will be rendered on the UI
+ * Conditional Rendering means based on the condition the components or elements will be rendered on the UI (user interface).
+ * To write conditions we use :
+      1. if-else
+      2. ternary operator
+      3. short-circuit operator
+
+### 1. if-else :
+
+  * Example : Source code :
 
 
 
