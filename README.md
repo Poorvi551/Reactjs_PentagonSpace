@@ -11,7 +11,7 @@
 7. [Single Page Application](#single-page-application)
 8. [Javascript XML](#javascript-xml)
 9. [Vite Installation](#Vite-Installation)
-10. [Map,Filter and Reduce](#ma)
+10. [Map Filter and Reduce](#ma)
 11. [Component](#component)
 12. [Props](#props)
 13. [Hooks](#hooks)
