@@ -318,7 +318,218 @@ UserData.jsx
 
 ### 2. Ternary Operator :
 
-* Example : Source code - 
+* *Example : Source code -*
+
+App.jsx
+
+      import React from 'react'
+      import { useState } from 'react'
+
+      const App = () => {
+        const [state,setState]=useState(false)
+        function toggle(){
+            setState(!state)
+        }
+      return (
+          <>
+            <h1>{state ? "Welcome" : "Please Login"}</h1> 
+            <button onClick={toggle}>Click</button>
+         </>
+      )
+      }
+
+      export default App
+
+* *Ex : Login logout example : Source code -*
+
+      import React from 'react'
+      import { useState } from 'react'
+
+      const App = () => {
+         const [state,setState]=useState(false)
+         function toggle(){
+             setState(!state)
+         }
+       return (
+             <>
+               <h1>My App</h1> 
+               <button onClick={toggle}>
+                  {state ? "Welcome" : "Please Login"}
+               </button>
+            </>
+       )
+      }
+
+      export default App
+
+* *Example :- Password Visibility (masking and unmasking): Source code -*
+
+      import React from 'react';
+      import { useState } from 'react';
+
+      const App = () => {
+         const [show,setShow]=useState(false)
+         function toggle(){
+             setShow(!show)
+         }
+      return (
+            <>
+               <input type={show ? "text" : "password"}/>
+               <button on onClick={toggle}>
+                 {show ? "Hide" : "Show"}
+               </button>
+           </>
+      )
+      }
+
+      export default App
+
+### 3. Short circuit Operator 
+
+1. Logical AND Operator.
+2. Logical OR Operator.
+
+### 1. Logical AND Operator.
+
+* *Ex : Source code -*
+
+      import React,{useState} from 'react'
+
+      const App = () => {
+         const [state, setState] = useState(false)
+         function toggle(){
+            setState(!state)
+         }
+
+       return (
+              <>
+                <center>
+                    <img src='https://www.oppo.com/content/dam/oppo_com/common/mkt/v2-2/reno15-series-en/list-page/reno15-pro-max/480-600-gold.png' height=  {'200px'}></img>
+                    <h2>Oppo A5 5G</h2>
+                    <p><b>Price:</b>20000</p>
+                    <p><b>Ratings:</b>⭐⭐⭐⭐</p>
+                    <button onClick={toggle}>{state ? "Hide" :"View" }</button>
+                    {state && <div>
+                     <h2>Specifications</h2>
+                     <p><b>8GB and 256GB</b></p>
+                     <p>Snapdragon</p>
+                     <p><b>50 MP</b></p>
+                     <p><b>6.7inch</b></p>
+                     </div>}
+                 </center>
+             </>
+       )
+      }
+
+      export default App
+
+## React Portal 
+
+* React portal allows us to render the components UI in different DOM Node outside parent DOM node.
+* *Ex:- Use case -> modals,tool-tips,popups etc.*
+* *Ex - Source code -*
+
+  index.html
+<hr>
+
+    <!doctype html>
+    <html lang="en">
+     <head>
+       <meta charset="UTF-8" />
+       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>react_portal</title>
+     </head>
+    <body>
+      <div id="root"></div>
+      <div id="portal"></div>
+      <script type="module" src="/src/main.jsx"></script>
+    </body>
+    </html>
+
+  PortalExample.jsx
+
+    import React from 'react'
+    import ReactDOM from 'react-dom'
+
+    const PortalExample = () => {
+     return ReactDOM.createPortal(
+     <div>
+        <h1>React Portal</h1>
+        <h1>JS</h1>
+     </div>,
+    document.getElementById("portal")
+    )
+    }
+
+    export default PortalExample
+
+App.jsx
+
+    import React from 'react'
+    import PortalExample from './components/PortalExample'
+
+    const App = () => {
+    return(
+        <>
+        <h1>Welcome</h1>
+        <PortalExample/> 
+        </>
+     )
+    }
+    export default App
+    
+## Toast Example 
+
+* *Ex:- Source code-[toast_example](./toast_example)*
+  
+App.jsx
+
+    import React,{useState} from 'react'
+    import ToastExample from './components/ToastExample'
+
+    const App = () => {
+       const[toast,setToast]=useState("")
+       function changeData(){
+          setToast("Item added to cart")
+       setTimeout(()=>{
+       setToast("")
+       },2000)
+     }
+    return (
+        <>
+          <button onClick={changeData}>Add Item</button>
+          {toast && <ToastExample a={toast}/>}
+    </>
+    )
+    }
+
+    export default App
+
+* PortalExample.jsx
+
+      import React from 'react'
+       import ReactDOM from 'react-dom'
+
+      const ToastExample = (props) => {
+      return ReactDOM.createPortal(
+      <div style={{
+        position:'fixed',
+        right:"20px",
+        top:"10px",
+        backgroundColor:"black",
+        color:"white",
+        borderRadius:"10px",
+        padding:"10px"
+      }}>
+        <h1>{props.a}</h1>
+      
+      </div>,
+       document.getElementById("toast")
+      )
+      }
+
+      export default ToastExample
 
     
 
