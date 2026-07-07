@@ -646,12 +646,12 @@ App.jsx
 * useRef deal with **Real DOM**.
 
 <table>
-    <tr>
-        <td>use case</td>
-    </tr>
-    <tr>
-        <td>Syntax </td>
-    </tr>
+    <td>
+        <tr>use case</tr>
+    </td>
+    <td>
+        <tr>Syntax </tr>
+    </td>
 </table>
 
 
