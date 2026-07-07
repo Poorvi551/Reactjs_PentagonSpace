@@ -423,6 +423,37 @@ App.jsx
 
       export default App
 
+### 2. Logical OR Operator.
+
+* *Ex : Source code -*
+
+      import React from 'react'
+
+      const App = () => {
+      let users=[
+       {id:1,name:'Rajesh',image:"https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.jpg?s=612x612&w=0&k=20&c=ZXRPTG9VMfYM3XDo1UL9DEpfO8iuGVSsyh8dptfKQsQ="},
+      {id:2,name:'Maasha',image:""},
+      {id:3,name:'Tom',image:"https://img.magnific.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?semt=ais_hybrid&w=740&q=80"}
+      ]
+      return (
+             <>
+               <h1>Users</h1>
+               <div style={{display:"flex",gap:"20px"}}>
+               { users.map((x)=>{
+               return<div>
+               <h2>{x.id}</h2>
+               <h3>{x.name}</h3>
+               <img src={x.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ANz49vSwixmIZwGMtfJb8KO8raLm81ZN35BTJhoiGA&s"} height={"200px"} alt=""/>
+              </div>
+            })
+           }</div>
+       </>
+      )
+      }
+
+      export default App
+
+
 ## React Portal 
 
 * React portal allows us to render the components UI in different DOM Node outside parent DOM node.
@@ -575,9 +606,53 @@ App.jsx
 
   App.jsx
 
+      import React from 'react'
+      import {toast,ToastContainer} from 'react-toastify'
 
+      const App = () => {
+         function toastExample(){
+            toast.success("Login Success...")
+         }
+      return (
+          <>
+            <button onClick={toastExample}>Click</button>
+            <ToastContainer theme='colored' autoClose={3000}/> 
+          </>
+      )
+      }
 
+      export default App
 
+## React Router
+
+* **React router** is used to perform navigation between the pages or components without reloading.
+* Don't use anchor tag in react.js
+
+### * Installation of react-router :
+
+* Installation :
+
+  >> npm i react-router-dom
+
+* Steps :
+
+  1. Activate *or* Enable Routing for the app component(Parent)using {BrowserRouter}.
+  2. Create a path for the components(child) using {Routes,Route}.
+  3. Create a link for the Child Components to navigate using {Link}.
+
+## UseRef() Hook
+
+* useRef() is used to target and manipulate DOM elements like getElementById,getElementByClassName, querySelector and querySelectorAll.
+* useRef deal with **Real DOM**.
+
+<table>
+    <tr>
+        <td>use case</td>
+    </tr>
+    <tr>
+        <td>Syntax </td>
+    </tr>
+</table>
 
 
 
