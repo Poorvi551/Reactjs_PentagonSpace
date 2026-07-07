@@ -646,12 +646,26 @@ App.jsx
 * useRef deal with **Real DOM**.
 
 <table>
-    <td>
-        <tr>use case</tr>
-    </td>
-    <td>
-        <tr>Syntax </tr>
-    </td>
+    <tr>
+        <td>use case</td>
+        <td>Syntax </td>
+    </tr>
+    <tr>
+        <td>To read input value </td>
+        <td>.current.value</td>
+    </tr>
+    <tr>
+        <td>To change text</td>
+        <td>.current.textcontent=" "</td>
+    </tr>
+    <tr>
+        <td>To Apply styles</td>
+        <td>.current.style.color=" "</td>
+    </tr>
+    <tr>
+        <td>To control Audio/Video</td>
+        <td>.current.plat()& .current.pause()</td>
+    </tr>
 </table>
 
 
