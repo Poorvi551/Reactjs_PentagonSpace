@@ -16,6 +16,10 @@
 12. [Props](#props)
 13. [Hooks](#hooks)
 14. [Conditional rendering](#conditional-rendering)
+15. [React Portal](#react-portal)
+16. [Toast Example](#toast-example)
+17. [React Router](#react-router)
+18. [useRef() Hook](#useref-hook)
 
 # React.js
 
@@ -318,17 +322,355 @@ UserData.jsx
 
 ### 2. Ternary Operator :
 
-* Example : Source code - 
+* *Example : Source code -*
 
+App.jsx
+
+      import React from 'react'
+      import { useState } from 'react'
+
+      const App = () => {
+        const [state,setState]=useState(false)
+        function toggle(){
+            setState(!state)
+        }
+      return (
+          <>
+            <h1>{state ? "Welcome" : "Please Login"}</h1> 
+            <button onClick={toggle}>Click</button>
+         </>
+      )
+      }
+
+      export default App
+
+* *Ex : Login logout example : Source code -*
+
+      import React from 'react'
+      import { useState } from 'react'
+
+      const App = () => {
+         const [state,setState]=useState(false)
+         function toggle(){
+             setState(!state)
+         }
+       return (
+             <>
+               <h1>My App</h1> 
+               <button onClick={toggle}>
+                  {state ? "Welcome" : "Please Login"}
+               </button>
+            </>
+       )
+      }
+
+      export default App
+
+* *Example :- Password Visibility (masking and unmasking): Source code -*
+
+      import React from 'react';
+      import { useState } from 'react';
+
+      const App = () => {
+         const [show,setShow]=useState(false)
+         function toggle(){
+             setShow(!show)
+         }
+      return (
+            <>
+               <input type={show ? "text" : "password"}/>
+               <button on onClick={toggle}>
+                 {show ? "Hide" : "Show"}
+               </button>
+           </>
+      )
+      }
+
+      export default App
+
+### 3. Short circuit Operator 
+
+1. Logical AND Operator.
+2. Logical OR Operator.
+
+### 1. Logical AND Operator.
+
+* *Ex : Source code -*
+
+      import React,{useState} from 'react'
+
+      const App = () => {
+         const [state, setState] = useState(false)
+         function toggle(){
+            setState(!state)
+         }
+
+       return (
+              <>
+                <center>
+                    <img src='https://www.oppo.com/content/dam/oppo_com/common/mkt/v2-2/reno15-series-en/list-page/reno15-pro-max/480-600-gold.png' height=  {'200px'}></img>
+                    <h2>Oppo A5 5G</h2>
+                    <p><b>Price:</b>20000</p>
+                    <p><b>Ratings:</b>⭐⭐⭐⭐</p>
+                    <button onClick={toggle}>{state ? "Hide" :"View" }</button>
+                    {state && <div>
+                     <h2>Specifications</h2>
+                     <p><b>8GB and 256GB</b></p>
+                     <p>Snapdragon</p>
+                     <p><b>50 MP</b></p>
+                     <p><b>6.7inch</b></p>
+                     </div>}
+                 </center>
+             </>
+       )
+      }
+
+      export default App
+
+### 2. Logical OR Operator.
+
+* *Ex : Source code -*
+
+      import React from 'react'
+
+      const App = () => {
+      let users=[
+       {id:1,name:'Rajesh',image:"https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.jpg?s=612x612&w=0&k=20&c=ZXRPTG9VMfYM3XDo1UL9DEpfO8iuGVSsyh8dptfKQsQ="},
+      {id:2,name:'Maasha',image:""},
+      {id:3,name:'Tom',image:"https://img.magnific.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?semt=ais_hybrid&w=740&q=80"}
+      ]
+      return (
+             <>
+               <h1>Users</h1>
+               <div style={{display:"flex",gap:"20px"}}>
+               { users.map((x)=>{
+               return<div>
+               <h2>{x.id}</h2>
+               <h3>{x.name}</h3>
+               <img src={x.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ANz49vSwixmIZwGMtfJb8KO8raLm81ZN35BTJhoiGA&s"} height={"200px"} alt=""/>
+              </div>
+            })
+           }</div>
+       </>
+      )
+      }
+
+      export default App
+
+
+## React Portal 
+
+* React portal allows us to render the components UI in different DOM Node outside parent DOM node.
+* *Ex:- Use case -> modals,tool-tips,popups etc.*
+* *Ex - Source code -*
+
+  index.html
+<hr>
+
+    <!doctype html>
+    <html lang="en">
+     <head>
+       <meta charset="UTF-8" />
+       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>react_portal</title>
+     </head>
+    <body>
+      <div id="root"></div>
+      <div id="portal"></div>
+      <script type="module" src="/src/main.jsx"></script>
+    </body>
+    </html>
+
+  PortalExample.jsx
+
+    import React from 'react'
+    import ReactDOM from 'react-dom'
+
+    const PortalExample = () => {
+     return ReactDOM.createPortal(
+     <div>
+        <h1>React Portal</h1>
+        <h1>JS</h1>
+     </div>,
+    document.getElementById("portal")
+    )
+    }
+
+    export default PortalExample
+
+App.jsx
+
+    import React from 'react'
+    import PortalExample from './components/PortalExample'
+
+    const App = () => {
+    return(
+        <>
+        <h1>Welcome</h1>
+        <PortalExample/> 
+        </>
+     )
+    }
+    export default App
     
+## Toast Example 
 
+* *Ex:- Source code-[toast_example](./toast_example)*
+  
+App.jsx
 
+    import React,{useState} from 'react'
+    import ToastExample from './components/ToastExample'
 
+    const App = () => {
+       const[toast,setToast]=useState("")
+       function changeData(){
+          setToast("Item added to cart")
+       setTimeout(()=>{
+       setToast("")
+       },2000)
+     }
+    return (
+        <>
+          <button onClick={changeData}>Add Item</button>
+          {toast && <ToastExample a={toast}/>}
+    </>
+    )
+    }
 
+    export default App
 
+* PortalExample.jsx
 
+      import React from 'react'
+      import ReactDOM from 'react-dom'
 
+      const ToastExample = (props) => {
+      return ReactDOM.createPortal(
+      <div style={{
+        position:'fixed',
+        right:"20px",
+        top:"10px",
+        backgroundColor:"black",
+        color:"white",
+        borderRadius:"10px",
+        padding:"10px"
+      }}>
+        <h1>{props.a}</h1>
+      
+      </div>,
+       document.getElementById("toast")
+      )
+      }
 
+      export default ToastExample
+
+* Library Installation :
+
+* Toastify library is provided by react
+
+  * Installing library :
+
+        npm install react-toastify
+      or
+
+        npm i react-toastify
+
+  * Example for creating toast using react-toastify library:
+  * *toast* -> To create or Trigger the message.
+  * *ToastContainer* -> To display the message on UI.
+ 
+  * *Values*
+    1. success
+    2. error
+    3. info
+    4. warn
+    5. loading
+
+* Position :
+  1. top-right
+  2. bottom-right
+  3. top-center
+  4. botton-center
+  5. top-left
+  6. bottom-left
+
+* Theme :
+
+  1. light
+  2. colored
+  3. dark
+ 
+* Auto Close
+  
+* autoclose={2000}
+
+* *Ex:- Source code -[toastify_example](./toastify_example)*
+
+  App.jsx
+
+      import React from 'react'
+      import {toast,ToastContainer} from 'react-toastify'
+
+      const App = () => {
+         function toastExample(){
+            toast.success("Login Success...")
+         }
+      return (
+          <>
+            <button onClick={toastExample}>Click</button>
+            <ToastContainer theme='colored' autoClose={3000}/> 
+          </>
+      )
+      }
+
+      export default App
+
+## React Router
+
+* **React router** is used to perform navigation between the pages or components without reloading.
+* Don't use anchor tag in react.js
+
+### * Installation of react-router :
+
+* Installation :
+
+  >> npm i react-router-dom
+
+* Steps :
+
+  1. Activate *or* Enable Routing for the app component(Parent)using {BrowserRouter}.
+  2. Create a path for the components(child) using {Routes,Route}.
+  3. Create a link for the Child Components to navigate using {Link}.
+
+## UseRef() Hook
+
+* useRef() is used to target and manipulate DOM elements like getElementById,getElementByClassName, querySelector and querySelectorAll.
+* useRef deal with **Real DOM**.
+
+<table>
+    <tr>
+        <td>Use case</td>
+        <td>Syntax </td>
+    </tr>
+    <tr>
+        <td>To read input value </td>
+        <td>.current.value</td>
+    </tr>
+    <tr>
+        <td>To change text</td>
+        <td>.current.textcontent=" "</td>
+    </tr>
+    <tr>
+        <td>To Apply styles</td>
+        <td>.current.style.color=" "</td>
+    </tr>
+    <tr>
+        <td>To control Audio/Video</td>
+        <td>.current.plat() & .current.pause()</td>
+    </tr>
+</table>
 
 
 
