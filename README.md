@@ -647,7 +647,7 @@ App.jsx
 
 <table>
     <tr>
-        <td>use case</td>
+        <td>Use case</td>
         <td>Syntax </td>
     </tr>
     <tr>
