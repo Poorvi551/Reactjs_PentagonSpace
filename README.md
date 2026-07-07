@@ -509,7 +509,7 @@ App.jsx
 * PortalExample.jsx
 
       import React from 'react'
-       import ReactDOM from 'react-dom'
+      import ReactDOM from 'react-dom'
 
       const ToastExample = (props) => {
       return ReactDOM.createPortal(
@@ -531,11 +531,49 @@ App.jsx
 
       export default ToastExample
 
-    
+* Library Installation :
 
+* Toastify library is provided by react
 
+  * Installing library :
 
+        npm install react-toastify
+      or
 
+        npm i react-toastify
+
+  * Example for creating toast using react-toastify library:
+  * *toast* -> To create or Trigger the message.
+  * *ToastContainer* -> To display the message on UI.
+ 
+  * *Values*
+    1. success
+    2. error
+    3. info
+    4. warn
+    5. loading
+
+* Position :
+  1. top-right
+  2. bottom-right
+  3. top-center
+  4. botton-center
+  5. top-left
+  6. bottom-left
+
+* Theme :
+
+  1. light
+  2. colored
+  3. dark
+ 
+* Auto Close
+  
+* autoclose={2000}
+
+* *Ex:- Source code -[toastify_example](./toastify_example)*
+
+  App.jsx
 
 
 
