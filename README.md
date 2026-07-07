@@ -668,7 +668,7 @@ App.jsx
     </tr>
     <tr>
         <td>To control Audio/Video</td>
-        <td>.current.plat()& .current.pause()</td>
+        <td>.current.plat() & .current.pause()</td>
     </tr>
 </table>
 
