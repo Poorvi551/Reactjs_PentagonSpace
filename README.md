@@ -16,6 +16,10 @@
 12. [Props](#props)
 13. [Hooks](#hooks)
 14. [Conditional rendering](#conditional-rendering)
+15. [React Portal](#react-portal)
+16. [Toast Example](#toast-example)
+17. [React Router](#react-router)
+18. [useRef() Hook](#useref-hook)
 
 # React.js
 
