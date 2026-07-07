@@ -672,8 +672,40 @@ App.jsx
     </tr>
 </table>
 
+App.jsx
 
+    import React,{useRef} from 'react'
+    const App=()=>{
+      let headingRef=useRef(null)
+      function change(){
+        headingref.current.textContent="Welcome"
+        headingRef.current.style.color="Green"
+      }
+      return(
+           <>
+             <h1 ref={headingRef}>Hello</h1>
+             <button onClick={change}>Click</button>
+           </>
+      )
+    }
+    export default App
 
+## Form Components 
+
+* There are 2 types of form components
+   1. Controlled components
+   2. Uncontrolled components
+
+<table>
+    <tr>
+        <td>Controlled form Components</td>
+         <td>Uncontrolled form components</td>                                                                                                                                                                                                                         
+    </tr>
+    <tr>
+         <td>Controlled form component is a form event whose value is controlled by react state using useState() hook</td>
+        <td>Uncontrolled form component is a form event whose value is controlled by real DOM using using useRef() hoo</td>
+    </tr>
+</table>
 
 
 
