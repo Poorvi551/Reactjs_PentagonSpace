@@ -794,7 +794,307 @@ App.jsx
         }
         export default App
 
+*ProductsExample.jsx*
 
+    import React,{useState} from 'react'
+    const App=()=>{
+        const [category,setCategory]=useState("")
+        let items=[
+           {id:1,name:"Boat speaker",image:"(https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Stone_Ignite.jpg?v=1694163047)",category:"Electronics"}
+           {id:2,name:"Nokia 1100",image:"https://www.astore.in/cdn/shop/files/1_e07c8c04-d4bb-463a-aabd-7660e2bde6ed.jpg?v=1762949501",category:"Electronics"}
+           {id:3,name:"T shirt",image:"[https://www.astore.in/cdn/shop/files/1_e07c8c04-d4bb-463a-aabd-7660e2bde6ed.jpg?v=1762949501](https://image.hm.com/assets/hm/6f/15/6f156a9bdcd72598b4e470dd68a8e154b1844b50.jpg?imwidth=2160)",category:"Fashion"}
+           let result=items.filter((x)=>{
+               return (
+                   <>
+                     <button onclick={()=>{setCategory("Electronics")}}>Electronics</button>
+                     <button onclick={()=>{setCategory("fashion")}}>fashion</button>
+                     { category===" " ? (<p>Choose Category</p>) :(
+                        result.length>0 ? (
+                        result.map((x)=>{
+                        return <div>
+                        <h2>{x.name}</h2>
+                        <img src={x.image} height={"200px"} alt=" " />
+                        </div>
+                        })
+                        ) :(<p>no products</p>)
+                     ))
+                     </>
+                )
+            }
+            export default App
+
+
+   ## useEffect()
+
+   * useEffect hook is a react hook that allows us to perforn side effects in functional components.
+   * What is side effects?
+   * Side effect is anything that happens outside the virtual DOM.
+   * Ex :
+        1. Making API calls
+        2. Interacting with browser DOM directly
+        3. Storing and reading data from local storage.
+    * React handles UI useEffect will handle external stuff.
+    * React will render the component first,later useEffect will run.
+
+* Syntax :
+
+      import {useEffect} from 'react'
+         useEffect(function,[dependencies])
+  
+* *Ex: Source code -*
+
+## Props drilling
+
+* **Props Drilling** - Props drilling is a process of transforming the data from parent component to the deeply nested child coponhn                                                                                                                                                                                                                                                                       b        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
 
 
 
