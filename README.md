@@ -703,14 +703,96 @@ App.jsx
     </tr>
     <tr>
          <td>Controlled form component is a form event whose value is controlled by react state using useState() hook</td>
-        <td>Uncontrolled form component is a form event whose value is controlled by real DOM using using useRef() hoo</td>
+        <td>Uncontrolled form component is a form event whose value is controlled by real DOM using using useRef() hook</td>
     </tr>
 </table>
 
+* Controlled Form Components :
 
+  * *Ex:-Source code*
 
+App.jsx
 
+    import React,{useState} from 'react'
+    const App=()=>{
+        const [state,setState]=useState("")
+        const [email,setEmail]=useState("")
+        function emailFunction(e){
+            setEmail(e.target.value)
+            console.log(e.target.value)
+        }
+        return(
+             <>
+              <h1>Name:{state}</h1>
+              <h1>Email:{email}</h1>
+              <input
+              type="text"
+              value={state}
+              onChange={(e)=>{setState(e.target.value)}}/>
+              <br/>
+              <input
+              type="email"
+              value={email}
+              onChange={emailFunction}/>
+            </>
+       )
+     }
+    export default App
 
+* Uncontrolled form components
+
+  App.jsx
+
+      import React,{useRef,useState} from 'react'
+      const App=()=>{
+          let inputRef=useref(null)
+          const [display,setDisplay]=useState("")
+          function targetInput(){
+               console.log(inputRef.current.value);
+               setDisplay(inputRef.current.value);
+           }
+           return(
+                 <>
+                   <h1>{display}</h1>
+                   <input type="text" ref={inputRef}/>
+                   <button onClick={targetInput}>Click</button>
+                 </>
+            )
+       }
+       export default App
+
+### Nested Ternary Operator
+
+* *Ex:Source code-*
+
+  App.jsx
+
+      import React,{useState} from 'react'
+      const App=()=>{
+         const [product, setProduct]=useState("")
+         let items=["Samsung F23","Samsung S23","Samsung M12","Samsung J7"," Redmi Note 10","Poco M3","Nothing 2a","Nothing 3a","Oppo K13"]
+         let result=items.filter((x)=>{
+              return x.toLowerCase().startswith(product.toLowerCase())
+         })
+         return (
+               <>
+                 <input
+                   type="text"
+                   value={product}
+                   onChange={(e)=>{setProduct(e.target.value)}}
+                   />
+                 {product==" " ? (<p>Search products</p> : (result.length>0 ? (
+                     <ol>
+                       {result.map((x)=>{
+                         return <li>{x}</li>
+                       })}
+                     </ol>
+                   ) : (<p>No products Found</p>)
+               )}
+             </>
+         )
+        }
+        export default App
 
 
 
