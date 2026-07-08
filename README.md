@@ -845,7 +845,7 @@ App.jsx
 
 ## Props drilling
 
-* **Props Drilling** - Props drilling is a process of transforming the data from parent component to the deeply nested child coponhn                                                                                                                                                                                                                                                                       b        
+* **Props Drilling** - Props drilling is a process of transforming the data from parent component to the deeply nested child component through one or more intermediate components.                                                                                                                                                                                                                                                                    b        
 
 
 
