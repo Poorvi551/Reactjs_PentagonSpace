@@ -20,6 +20,13 @@
 16. [Toast Example](#toast-example)
 17. [React Router](#react-router)
 18. [useRef() Hook](#useref-hook)
+19. [Form Components](#form-components)
+20. [useEffect() Hook](useEffect()-Hook)
+21. [Props Drilling](#props-drilling)
+22. [React Application Optimization](#react-application-optimization)
+23. [LifeCycle methods](#lifecycle-methods)
+24. [Private Routing/ Private Route](#private-routing-/-private)
+25. [Higher order ](#higher-order-component)
 
 # React.js
 
