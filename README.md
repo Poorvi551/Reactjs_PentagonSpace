@@ -26,7 +26,7 @@
 22. [React Application Optimization](#react-application-optimization)
 23. [LifeCycle methods](#lifecycle-methods)
 24. [Private Routing/ Private Route](#private-routing-/-private)
-25. [Higher order ](#higher-order-component)
+25. [Higher order component](#higher-order-component)
 
 # React.js
 
