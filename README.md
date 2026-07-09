@@ -845,7 +845,93 @@ App.jsx
 
 ## Props drilling
 
-* **Props Drilling** - Props drilling is a process of transforming the data from parent component to the deeply nested child component through one or more intermediate components.                                                                                                                                                                                                                                                                    b        
+* **Props Drilling** - Props drilling is a process of transforming the data from parent component to the deeply nested child component through one or more intermediate components.
+* To overcome the problem of props drilling, we use *Context API.*
+* Steps to achieve it :
+   1. Create a context
+   2. Provide data for the Context
+   3. Use the Context
+
+* Example : Contextapi_example
+
+  Data.jsx
+
+      import {createContext} from 'react'
+      export const Data=createContext(null)
+
+  or
+
+      import {createContext} from 'react';
+      const Data=createContext(null)
+      export default Data
+
+  > pages/
+      |_ Grandparent.jsx
+      |_ Parent.jsx
+      |_ Child.jsx
+  
+   Grandparent.jsx
+
+      import React from 'react'
+      import Parent from './parent'
+      const GrandParent=()=>{
+          return (
+              <>
+                <h1>This is grandparent</h1>
+              </>
+          )
+      }
+      export default App
+
+## React Application Optimization
+
+    cmd
+       >> npm create vite@latest optimization-technique
+
+* Optimization is a process of improving the performance of an application.
+* There are few techniques:
+     1. ReactMemo
+     2. useMemo
+     3. useCallback
+     4. Lazyloading
+
+1. ReactMemo - React memo is used to prevent unnecessary re-renders between components.
+
+* React will keep it in memory when component changes it will update .
+* ***NOTE :- Optimization techniques also include useEffect and react portal.***
+
+Component2.jsx
+
+    import React from 'react'
+    const Component2=()=>{
+      console.log("Component 2 rendered...")
+      return (
+          <>
+            <h1>component2</h1>
+          </>
+      )
+    }
+    export default React.memo(Component2)
+
+Component1.jsx
+
+    import React,{useState} from 'react'
+    import Component2 from './Component2'
+    const Component1=()=>{
+      const [count,setCount]=useState(0)
+      function inc(){
+         setCount(count+1)
+      }
+      console.log("Component 1 rendered...")
+      return (
+          <>
+            <h1>{count}</h1>
+            <button onClick={inc}>Click</button>
+            <Component2/>
+          </>
+      )
+    }
+    export default Component1
 
 
 
