@@ -933,6 +933,330 @@ Component1.jsx
     }
     export default Component1
 
+2. useMemo - It is used to prevent unnecessary re-calculations of expensive function we use useMemo hook.
+
+App.jsx
+
+    import React,{useState,useMemo} from 'react'
+    const App=()=>{
+       const [count,setCount]=useState(0)
+       const [user,setUser]=useState("")
+       function inc(){
+          setCount(count+1)
+       }
+       function square(n){
+          console.log("Calculating square");
+          return n*n
+       }
+       // with useMemo
+       let result=useMemo(()=>{return square(count)},[count])
+       // Without useMemo
+       //let result=square(count)
+       return (
+           <>
+             <h1>Square of {count} is {result}</h1>
+             <button onClick={inc}>Click</button><br/>
+             <input 
+             type="text"
+             value={user}
+             onChange={(e)=>{setUser(e.target.value)}}
+             />
+          </>
+        )
+     }
+     export default App
+       
+3. useCallback - It is used to prevent unnecessary re-creation of function.
+4. lazyLoading - It is used to load the page one-by-one. Instead of loading everything in single shot we load it one-by-one using lazyLoading.
+
+## LifeCycle methods
+
+* In FBC we don't have in built functions - Mount,update,unmunt using (useEffect hook)
+* In CBC we have built in functions.
+    1. ComponentDidMount()
+    2. ComponentDidUpdate()
+    3. ComponentWillUnmount()
+
+* MOUNT and UNMOUNT - router example
+
+* Update - countdown example
+
+* The term lifecycle refers to series of phases where components goes through creation to removal from the DOM.
+* In FBC we don't have traditional lifecycle methods like :
+    1. ComponentDidMount()
+    2. ComponentDidUpdate()
+    3. ComponentWillUnmount()
+* But using useEffect() hook we can perform similar action
+* In FBC we have 3 phases
+    1. Mount
+    2. Update
+    3. Unmount
+
+1. Mount - Mount means component is created and inserted into a DOM.
+2. Update - Update means component is rendered due to states or props change.
+3. Unmount - Unmount means component is removed from the DOM
+
+* Private Routings / Private Route
+
+PrivateRoute.jsx
+
+    import React from 'react'
+    import {Navigate} from 'react-router-dom'
+    import {toast} from 'react-toastiy'
+    const PrivateRoute=(props)=>{
+       let isLoggedIn=localStorage.getItem('loggedIn')
+       console.log(typeof isLoggedIn);
+       if (isLoggedIn){
+           return props.children
+       }else{
+           toast.warn("Please Login")
+           return <Navigate to={"/"}/>
+       }
+    }
+    export default PrivateRoute
+
+* To protect dashboard and Profile page :
+
+  App.jsx
+
+      import React from 'react'
+      import {Routes, Route} from 'react-router-dom'
+      const App=()=>{
+        return (
+             <>
+               <Routes>
+                  <Route path='/' element={<Login/>}/>
+                  <Route path='/dashboard' eleent={
+                   <PrivateRoute>
+                   <Dashboard/>
+                   </PrivateRoute>}/>
+                   <Route path='/profile' element={
+                    <PrivateRoute>
+                    <Profile/>
+                    </PrivateRoute>}/>
+              </Routes>
+           </>
+        )
+      }
+      export default App
+
+## Higher Order Component (HOC)
+
+* HOC is a function which takes another component as input and it returns a new enhanced component with additional features or logics.
+  
+###  Feature
+
+1. Code Reusability
+2. To avoid duplicate-logics
+3. For Authentication
+4. For Authorization
+5. Protected Routes
+
+* Example
+
+  StyledComponent.jsx
+
+      import React from 'react'
+      const StyledComponent=(WrappedComponent)=>{
+        return ()=>{
+           return (
+                 <>
+                   <div style ={{background:"yellow",color:"red"}}/>
+                   <WrappedComponent/>
+                   </div>
+                 </>
+          )
+       } 
+      }
+      export default StyledComponent
+
+Message1.jsx
+
+    import React from 'react'
+    const Message1=()=>{
+       return ()=>{
+         return (
+             <>
+               <h1>Good Morning!</h1>
+             </>
+         )
+       }
+    }
+    export default Message1
+
+Message2.jsx
+
+    import React from 'react'
+    const Message2=()=>{
+       return ()=>{
+         return (
+             <>
+               <h1>Good Night!</h1>
+             </>
+         )
+       }
+    }
+    export default Message2
+
+App.jsx
+
+    import React from 'react'
+    import Message1 from './pages/message1.jsx'
+    import Message2 from './pages/Message2.jsx'
+    import StyledComponent from './components/StyledComponent'
+    const App =()=>{
+        let ModifiedMessage1=StyledComponent(Message1)
+        let ModifiedMessage2=StyledComponent(Message2)
+        return (
+           <>
+             <ModifiedMessage1/>
+             <ModifiedMessage2/>
+        )
+    }
+    export default App
+
+# Projects
+
+1. Crud opererations - student_ management project
+   
+   >> npm i -g json-sever  // to install mock backend or server
+   
+2. Create file for database outside src folder
+
+   db.json
+
+3. Install Axios()
+   
+   >>npm i axios
+
+4. Install toastify
+
+   >> npm i react-toastify
+
+5. To run backend server
+
+   * Go to cmd
+       >> json-server __watch db. json __port 3000
+       * *Copy endpoint and  paste it g*
+       
+6. To run frontend server
+   
+     >> npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
